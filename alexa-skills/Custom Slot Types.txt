@@ -1,0 +1,32 @@
+GPIO_CONTROL
+    on
+    off
+
+TANK_CONTROL
+    daylight
+    day light
+    nightlight
+    brightlight
+    feeder
+    the feeder
+    bright light
+    the bright light
+    bright
+    dim light
+    dimlight
+    the dim light
+    night light
+    the night light
+    the heater
+    heater
+    dim 
+    night
+    day
+  
+ PHRASE_CONTROL
+    feed the fish
+    feed the fishes
+    feed my fish
+    feed my fishes
+    fish
+    my fish
