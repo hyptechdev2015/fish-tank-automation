@@ -1,0 +1,3 @@
+GPIOControlIntent to turn pin {pin} {status}
+FishTankDeviceIntent to turn {device} {status}
+FishTankPhraseIntent to {phrase}
