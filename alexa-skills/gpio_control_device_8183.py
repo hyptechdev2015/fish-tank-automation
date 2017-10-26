@@ -17,7 +17,7 @@ def phrase_control(phrase):
     pinNum = 18
     GPIO.setup(pinNum, GPIO.OUT)
 
-    if phrase == 'feed the fish' or phrase == 'feed the fishes' or phrase == 'feed my fish' or phrase == 'feed my fishes'$
+    if phrase == 'feed the fish' or phrase == 'feed the fishes' or phrase == 'feed my fish' or phrase == 'feed my fishes':
         GPIO.output(pinNum, GPIO.HIGH)
         return statement('The fish feeder in online.')
     else:
@@ -29,7 +29,7 @@ def phrase_control(phrase):
 def tank_control(status, device):
     try:
         pinNum = int(getPinDevice(device))
-    except Exception, e:
+    except Exception as e:
         return statement('Pin number for ' + device + ' not valid.')
 
     GPIO.setup(pinNum, GPIO.OUT)
@@ -53,9 +53,9 @@ def tank_control(status, device):
 def gpio_control(status, pin):
     try:
         pinNum = int(pin)
-    except Exception, e:
+    except Exception as e:
         pinNum = int(pin)
-    except Exception, e:
+    except Exception as e:
         return statement('Pin number not valid.')
 
     GPIO.setup(pinNum, GPIO.OUT)
@@ -78,11 +78,11 @@ def getPinDevice(dev):
     pin = ''
     if dev.find('feed') > 0 or dev == 'feeder' or dev == 'the feeder' or dev == 'fish feeder' or dev == 'the fish feeder':
         pin = 18
-    elif dev == 'daylight' or dev == 'day light'  or  dev.find('day') > 0 or  dev.find('bright') > 0 or dev.find('pride')$
+    elif dev == 'daylight' or dev == 'day light'  or  dev.find('day') > 0 or  dev.find('bright') > 0 or dev.find('pride'):
         pin = 5
     elif dev.find('dim') > 0 or dev == 'dim light' or dev == 'dim' or dev == 'the dim light' or dev == 'dimlight':
         pin = 26
-    elif dev.find('night') > 0 or dev == 'night light' or dev == 'night' or dev == 'the night light' or dev == 'nightligh$
+    elif dev.find('night') > 0 or dev == 'night light' or dev == 'night' or dev == 'the night light' or dev == 'nightligh':
         pin = 6
     elif dev.find('heater') > 0 or dev == 'heater light' or dev == 'heater' or dev == 'the heater':
         pin = 27

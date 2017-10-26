@@ -1,3 +1,9 @@
+#!/usr/bin/env python
+"""
+This script using:
+https://github.com/erik/alexandra
+"""
+
 import alexandra
 import RPi.GPIO as GPIO
 import logging
@@ -54,7 +60,7 @@ def get_name_intent(slots, session):
     device = slots['device']
     try:
         pinNum = int(getPinDevice(device))
-    except Exception, e:
+    except Exception as e:
         return alexandra.respond('Pin number for ' + device + ' not valid.')
 
     GPIO.setup(pinNum, GPIO.OUT)
@@ -78,7 +84,7 @@ def get_name_intent(slots, session):
     pin = slots['pin']
     try:
         pinNum = int(pin)
-    except Exception, e:
+    except Exception as e:
         return statement('Kevin, Pin number not valid.')
 
     GPIO.setup(pinNum, GPIO.OUT)
